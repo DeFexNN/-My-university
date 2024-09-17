@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(void) {
+    char c; 
+    char f;
+    char b; 
+    unsigned char n;
+    unsigned int UnitStateWord;
+    printf("EnterStanword: ");
+    scanf_s(" %x", &UnitStateWord); // Змінено на %x для шістнадцяткового введення
+    c = (UnitStateWord >> 8) & 1;
+    f = (UnitStateWord >> 4) & 15;
+    n = UnitStateWord & 15;
+    putchar('\n ');
+    printf(" %d \n ", c);
+    printf(" %d \n ", f);
+    printf(" %d \n ", n);
+    return 0;
+}

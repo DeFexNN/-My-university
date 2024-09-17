@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double a, b, x, T1, T2;
+    a = 12.5;
+    b = 1.3;
+    printf_s("enter x \n");
+    scanf_s("%lf", & x);
+    T1 = b / ((a - b) * (b + x)) - a / pow(a - b, 2) * log((a + x) / (b + x));
+    T2 = (1 / a)*(log(tan(a * x / 2))-1/sin (a * x));
+    printf("I1 = %lf\n", T1);
+    printf("I2 = %lf\n", T2);
+    return 0;
+}

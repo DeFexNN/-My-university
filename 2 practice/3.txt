@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void) {
+    char c;
+    char r;
+    char e;
+    unsigned int UnitStateWord;
+
+    printf("d:");
+    scanf_s("%hd", &c);
+    printf("\n r:");
+    scanf_s("%hd", &r);
+    printf("\n a:");
+    scanf_s("%hd", &e);
+
+    UnitStateWord |= ((unsigned short)c & 1023) << 6;
+    UnitStateWord |= ((unsigned short)r & 1) << 5;
+    UnitStateWord |= ((unsigned short)e & 31);
+
+    printf("\n UnitStateWord: %4x ", UnitStateWord);
+    return 0;
+}//192f
