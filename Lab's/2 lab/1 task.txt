@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main(void)
+{
+	int i, j = 0, n, b;
+	b = 1;
+	printf("\n \t Enter the primary natural number:");
+	scanf_s("%d", &i);
+	/*
+	if (i > 0) {
+		i = i * -1;//перше завдання тільки відємні
+	}*/
+	/*
+	if (i < 0) {
+		i = abs(i);//друге завдання тільки додатні
+	}
+	printf("Reversed is: %d", i);*/
+	printf("\t Enter the last natural number:");
+	scanf_s("%d", &n);
+	/*
+	if (n > 0) {
+		i = i * -1;//перше завдання тільки відємні
+	}*/
+	/*
+	if (n < 0) {
+		i = abs(i);//друге завдання тільки додатні
+	}*/
+	printf("\n \t The numbers are:");
+	/*
+	while (i <= n) {
+		printf("\n \t %d:   %3d", b , i);//третє завдання впорядкування по номерам в стовпчик
+		++b;
+		++i;
+		++j;
+	}*/
+	/*
+	while (i <= n) {
+		printf("\t %d:%3d", b, i);//четверте завдання
+		++b;
+		++i;
+		++j;
+	}*/
+	/*
+	while (i >= n) {
+		printf("\t the ++i is: %d \n   the --n is: %d", i , n);
+		++i;
+		--n;
+	}
+	*/
+	printf("\n \t Total numbers:%d \n", j);
+	printf("\n Press any key:");
+	_getch();
+	return 0;
+}

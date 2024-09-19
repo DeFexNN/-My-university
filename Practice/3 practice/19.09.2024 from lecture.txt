@@ -1,0 +1,17 @@
+(-1)^n* n^2/n!(n(2)³
+
+//Для фактріалу long long int бо не вистачить данних бо він швидко розширюється
+
+
+int main() {
+double suma=0;suma10=0;// eps=0.00001;
+long long int fact = 1;
+int k = -1;
+for(int n = 1 ; ;n++ , k*=(-1), fact k=n){
+el =1.0* k*n*n/(fact * pow (n+2,3));
+sumaf=ee;
+if(n==10)suma10 = suma;
+if(ee<eps) break;
+if(fabs(ee)<eps) break;
+}
+}
