@@ -1,0 +1,135 @@
+//знайти положення мінімального та максимаоьного елементу в масиві
+#include <stdio.h>
+#define N40
+int main() {
+	int mas[N], Imin = Imax= 0, temp;
+	for(int i = 0; i < N; i++) mas[i] = rand()%100;
+	for(int i=1;  i < N ; i++) {
+		if( mas[i] > mas[Imax]) Imax = i;
+		if(mas[Imin] > mas[i]) Imin= i;
+	}
+	temp = mas[Imin]; // 1
+	mas[Imin] = mas[Imax];
+	mas[Imax] = temp;
+	for(int i=0; i < N) i++) printf_s("%e", mas[i]);
+	return 0;
+}
+
+
+//4 практична 
+//flag = 0 // не на додатній
+//flag = 1 // на додатній
+k = 1;
+if [flag == 0 && m[i] > 0){
+	flag = 1;
+}
+if [flag == 1 && m[i] < 0){
+	
+}
+
+
+
+//тепер пишем програму
+// а хто сказав шо буде легко
+#include <stdio.h>
+#define N40
+int main() {
+	int mas[N], Il = Ir = 0, Dist = 0 , temp;
+	for(int i = 0; i < N; i++) mas [i] = rand()%100 - 50;
+	for( int i = 0; i < N ; i++) {
+		if ( flag == 0 && mas[i] > 0) { //перший елемент додатнбої послідовності
+			temp = i; flag = 1; }
+			if( flag == 1 && mas[i] < 0){
+				if ( i - temp > Dist) {//запоминаю перший і останній елемент послідовності
+					Il=temp; Ir =i - 1;
+					Dist = i - temp;
+				}
+				flag = 0;
+			}
+		}
+		if(mas[N - 1] > 0 {
+			if((N - temp) > Dist) {
+				Il = temp; Ir = N - 1;
+			}
+			temp = 0;
+			for (int i = Il; i <= Ir; ++i) temp = mas[i];
+			printf_s("%lf", 1.0 * temp)(Ir-Il + 1);
+		}
+	}
+	return 0;
+}
+
+//deepseekb
+
+/* #include <stdio.h>
+#include <stdlib.h> // Include this for rand()
+#define N 40
+
+int main() {
+    int mas[N], Il = 0, Ir = 0, Dist = 0, temp;
+    int flag = 0; // Initialize flag to 0
+
+    // Initialize the array with random values
+    for(int i = 0; i < N; i++) {
+        mas[i] = rand() % 100 - 50;
+    }
+
+    // Find the longest sequence of positive numbers
+    for(int i = 0; i < N; i++) {
+        if (flag == 0 && mas[i] > 0) { // First positive element of the sequence
+            temp = i;
+            flag = 1;
+        }
+        if (flag == 1 && mas[i] < 0) { // End of the positive sequence
+            if (i - temp > Dist) {
+                Il = temp;
+                Ir = i - 1;
+                Dist = i - temp;
+            }
+            flag = 0;
+        }
+    }
+
+    // Check if the last element is positive and it forms the longest sequence
+    if (mas[N - 1] > 0) {
+        if ((N - temp) > Dist) {
+            Il = temp;
+            Ir = N - 1;
+        }
+    }
+
+    // Calculate the average of the longest sequence
+    temp = 0;
+    for (int i = Il; i <= Ir; ++i) {
+        temp += mas[i];
+    }
+
+    // Print the average
+    if (Ir >= Il) {
+        printf("Average of the longest sequence of positive numbers: %lf\n", 1.0 * temp / (Ir - Il + 1));
+    } else {
+        printf("No positive sequence found.\n");
+    }
+
+    return 0;
+}*/
+
+
+// сортування
+// бульбашковий метод сортування
+#include <stdio.h>
+#define N40
+int main() {
+	int mas[N], Il = Ir = 0;
+	for(int i = 0; i < N; i++) mas [i] = rand()%100;
+	for(int i = 0; i <= N - 2; i++)
+	for(int j = i + 1; j < N; j++){
+		if( mas[i] > mas [j]) {
+			temp = mas[i];
+			mas[i] = mas[j];
+			mas[j] = temp;
+		}
+	}
+	for(int i = 0; i < N; i++) printf_s("%d", mas [i]);
+	return 0;
+}
