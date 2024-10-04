@@ -1,0 +1,99 @@
+
+
+
+//двовимірні масиви
+//3.10.2024 лекція
+num_el int[][]//назва //тип данних зімннив в масиві //[] номер рядка//[]номер стовпця
+//знайти суму елементів масиву
+#include <stdio.h>
+#define N40
+#define M40
+int main(){
+	int mas[N][M]={0};
+	for (int i = 0; i < N; i++)
+		for(int j = 0; j < M; j++) mas [i][j]=rand()%100;
+	for(int i = 0; i < N; i++)
+		for(int j = 0; j<M; j++) suma += mas[i][j];
+}
+
+
+#include <stdio.h>
+#define N40
+#define M40
+int main(){
+	int mas[N][M]={0};
+	int suma [N+M+2];//кількість елементів в масиві
+	for (int i = 0; i < N; i++)
+		for(int j = 0; j < M; j++) mas [i][j]=rand()%100;
+	for(int i = 0; i < N ; i++)
+		for( int j = 0; j < N; j++) suma[i] += mas[i][j];//сума рядків
+	for(int i = 0; i < N; i++)
+		for(int j; j < N; j++) suma[N+i] += mas[j][i];//сума стовпців
+	for(int i = 0; i < N; i++) suma[2*N] += mas[i][i]//і=0 буде 0;0 і так далі //https://imgur.com/a/IBylQuK
+	for( int i = 0; i < N) i++) suma [2*N+1] += mas[i][N-1-i];
+	for(int i = 0; i < 2 * N + 2; i++) printf_s("mas[%d]: =%d", i , mas[i]);
+	
+	
+}
+
+
+//поміняти місцями рядок де находиться мінімальний елемент з рядком максимального елементу
+
+
+#include <stdio.h>
+#define N40
+#define M40
+int main(){
+	int mas[N][M]={0};
+	int suma [N+M+2];//кількість елементів в масиві
+	for (int i = 0; i < N; i++)
+		for(int j = 0; j < M; j++) mas [i][j]=rand()%100;
+min=max=mas[0][0]; NRmin = NRmax = 0;
+for ( int i = 0; i < N; i++)
+	for (int j = 0; j < N; j++){
+		if(max < mas[i][j]){
+			max= mas[i][j]; NRmax = i;
+		}
+		if(min > mas[i][j]){
+			min= mas[i][j]; NRmin = i;
+		}
+	for(int = 0; i < N ; i++){
+		temp=mas[NRmin][i];
+		mas[NRmin][i]=mas[NRmax][i];
+		mas[NRmax][i]=temp;
+	}
+	for(int i = 0 ; i < N; i++){
+		for(int j = ; j< N; j++)
+		printf_s("%4d", mas[i][j]);
+		printf_s("\n");
+	}
+	return 0;
+	
+	}
+	
+	
+	//відсортуємо стовбці в матриці
+	
+	#include <stdio.h>
+#define N40
+#define M40
+int main(){
+	int mas[N][M]={0};
+	int suma [N+M+2];//кількість елементів в масиві
+	for (int i = 0; i < N; i++)
+		for(int j = 0; j < M; j++) mas [i][j]=rand()%100;
+	for(int k = 0; k < N; k++){
+		for(int i = 0; i < N-1; i++)
+			for(int j = i + 1; j < N; j++)
+			if(mas[i][k] > mas[j]){
+				temp=mas[i][k];
+				mas[j][k] = temp;
+				
+			}
+	}
+
+	
+}
+
+
+//заповнити матрицю по спіралі
